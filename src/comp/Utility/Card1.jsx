@@ -4,7 +4,7 @@ import './card.css'
 const Card1 = ({ Images ,text,content ,prize}) => {
     return (
         <div className=' sub_card1 overflow-hidden pt-9 w-80 '>
-            <div className='relative flex flex-col pl-6 pr-6 z-30 '>
+            <div className='sub1 relative flex flex-col pl-6 pr-6 z-30 '>
                 <div className='pt-4 pl-5 '>
                     <img
                         className='corner'
@@ -19,14 +19,14 @@ const Card1 = ({ Images ,text,content ,prize}) => {
                     </div>
                     <div className="self-stretch flex flex-col items-start justify-start pt-4 px-0 pb-0 text-lg text-flow-com-hackathon-1903x885-default-black">
                         <div className="self-stretch flex flex-row items-start justify-start py-0 pr-[131.38999938964844px] pl-0 gap-[15.61px]">
-                            <div className="rounded bg-flow-com-hackathon-1903x885-default-spring-green flex flex-row items-start justify-start pt-2.5 px-2 pb-2">
+                            {/* <div className="rounded bg-flow-com-hackathon-1903x885-default-spring-green flex flex-row items-start justify-start pt-2.5 px-2 pb-2">
                                 <div className="relative leading-[18px] [text-shadow:0px_0px_1px_rgba(0,_0,_0,_0.01)]">
                                     {prize}
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="rounded bg-flow-com-hackathon-1903x885-default-nero-10 flex flex-row items-start justify-start pt-2.5 px-2 pb-2 text-flow-com-hackathon-1903x885-default-nero">
                                 <div className="relative leading-[18px] [text-shadow:0px_0px_1px_rgba(0,_0,_0,_0.01)]">
-                                    Prize
+                                    {/* Prize */}
                                 </div>
                             </div>
                         </div>

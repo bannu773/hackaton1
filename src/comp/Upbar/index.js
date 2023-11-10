@@ -15,6 +15,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { Link, NavLink, useHistory } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 import { useNavigate, useParams } from "react-router-dom";
+import Highlight1 from "../HighLight2/HIghlight1";
 
 const pages = [
   "Home",
@@ -28,17 +29,19 @@ const pages = [
 ];
 
 const useStyles = makeStyles((theme) => ({
-  
+
   navLink: {
     color: "violet",
     textDecoration: "none",
-    
     fontSize: "23px",
     textShadow: "none",
     "&:hover": {
       color: "#ff1aff", // Change color on hover
       textDecoration: "none", // Remove underline on hover (if needed)
       textShadow: "none",
+    },
+    "&.active": {
+      color: "red", // Change the color to your desired color
     },
   },
   menuLink: {
@@ -51,6 +54,9 @@ const useStyles = makeStyles((theme) => ({
       color: "#ff1aff", // Change color on hover
       textDecoration: "none", // Remove underline on hover (if needed)
       textShadow: "none",
+    },
+    "&.active": {
+      color: "red", // Change the color to your desired color
     },
   },
 }));
@@ -104,12 +110,12 @@ function UpBar({ scrollToSection }) {
               display: { xs: "none", lg: "flex" },
               fontWeight: 900,
               letterSpacing: ".1rem",
-              
+
               textDecoration: "none",
             }}
             className={classes.navLink}
           >
-            AVISHKAAR
+            <Highlight1 text={"AVISKHAR"} />
           </Typography>
 
           {/* Mobile Menu */}
@@ -151,6 +157,8 @@ function UpBar({ scrollToSection }) {
                   to={`/${page.toLowerCase()}`} // You can use the 'to' prop to specify the URL
                   exact
                   
+                  activeClassName={classes.menuLink} // Add the activeClassName prop
+
                 >
                   <Typography textAlign="center" className={classes.menuLink}>
                     <a href={`${page.toLowerCase()}`}>{page}</a>
@@ -166,11 +174,13 @@ function UpBar({ scrollToSection }) {
               <Button
                 key={page}
                 onClick={() => handleMenuItemClick(page)} // Call handleMenuItemClick with the page name
-                sx={{  textTransform: "capitalize"  }}
+                exact
+                activeClassName={classes.menuLink}
+                sx={{ textTransform: "capitalize" }}
               >
                 <Typography textAlign="center" className={classes.menuLink}>
-                    <a >{page}</a>
-                  </Typography>
+                  <a >{page}</a>
+                </Typography>
               </Button>
             ))}
           </Box>

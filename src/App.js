@@ -11,6 +11,8 @@ import SchoolIcon from '@mui/icons-material/School';
 import StarIcon from '@mui/icons-material/Star';
 import TimeLine from './comp/timeline/Timeline';
 import Timer from './comp/timer/timermain';
+import Prize_card from './comp/Prize_card';
+import NFTCardComponent from './comp/Prize_card';
 
 
 const App = () => {
@@ -74,10 +76,8 @@ const App = () => {
 
   return (
     <div className='bg-black' >
-      
-      <UpBar scrollToSection={scrollToSection}  />
-      <Land homeref={homeref} aboutRef={aboutRef} themesRef={themesRef} timelineRef={timelineRef} chiefguestsRef={chiefguestsRef} sponsorsRef={sponsorsRef} faqsRef={faqsRef} teamRef={teamRef} scrollToSection={scrollToSection}  />
-    </div>
+      <NFTCardComponent />
+     </div>
   );
 };
 

@@ -20,6 +20,9 @@ const TimeLine = ({ timelineRef }) => {
       <style>
         {`
           /* Apply scale transformation on hover */
+          .vertical-timeline::before{
+            height : 95%;
+          }
           .outerpart{
             overflow:hidden;
           }
@@ -49,6 +52,17 @@ const TimeLine = ({ timelineRef }) => {
           }
           .vertical-timeline-element:hover {
             transform: scale(1.1); /* Larger size on hover, adjust the scale factor as needed */
+            transition: transform 0.3s ease-in-out;
+            transform-origin: center bottom;
+            
+            .sub_title{
+              
+              transition: transform 0.3s ease-in-out;
+              translate: 10px 0px;
+              color : rgb(255, 137, 245);
+              font-weight: 500;
+              
+            }
           }
           @media screen and (min-width: 1024px) {
             .VerticalTimeline{
@@ -59,6 +73,13 @@ const TimeLine = ({ timelineRef }) => {
             }
             .vertical-timeline-element:hover {
               transform: scale(0.9); /* Larger size on hover, adjust the scale factor as needed */
+              transition: 1s ease-in-out;
+              .sub_title{
+                transform: scale(1.1);
+                color : rgb(255, 137, 245);
+                font-weight: 500;
+                
+              }
             }
           }
           @media screen and (min-width: 992px){
@@ -75,6 +96,13 @@ const TimeLine = ({ timelineRef }) => {
           }
             .vertical-timeline-element:hover {
               transform: scale(1.05); /* Larger size on hover, adjust the scale factor as needed */
+              transition: 1s ease-in-out;
+              .sub_title{
+                transform: scale(1.1);
+                color : rgb(255, 137, 245);
+                font-weight: 500;
+                
+              }
             }
           }
           @media screen and (max-width: 991px) {
@@ -91,6 +119,13 @@ const TimeLine = ({ timelineRef }) => {
           }
             .vertical-timeline-element:hover {
               transform: scale(1.05); /* Larger size on hover, adjust the scale factor as needed */
+              transition: 1s ease-in-out;
+              .sub_title{
+                transform: scale(1.1);
+                color : rgb(255, 137, 245);
+                font-weight: 500;
+                
+              }
             }
           } 
           
@@ -106,6 +141,8 @@ const TimeLine = ({ timelineRef }) => {
             translate: 600px 600px;
             right:800px;
           }     
+
+          
           
             p span
            {
@@ -135,19 +172,19 @@ const TimeLine = ({ timelineRef }) => {
               contentArrowStyle={{
                 borderRight: "7px solid  rgb(33, 150, 243)",
               }}
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              iconStyle={{ background: "rgb(215, 50, 200)", color: "#fff" }}
               icon={<WorkIcon />}
             >
               <div className="grad1"></div>
-              <h3 className="vertical-timeline-element-title">PHASE-1</h3>
-              <h4 className="vertical-timeline-element-subtitle">
+              <h3 className="vertical-timeline-element-title sub_title">PHASE-1</h3>
+              <h4 className="vertical-timeline-element-subtitle  sub_title">
                 Problem Statement Submission
               </h4>
               <p>
 
-              Aavishkaar 2024 invites early submissions of 1-minute 
-              video pitches and abstracts of innovative solutions for problem statements, 
-              promising mentorship and theme alignment for your solutions. <br />
+                Aavishkaar 2024 invites early submissions of 1-minute
+                video pitches and abstracts of innovative solutions for problem statements,
+                promising mentorship and theme alignment for your solutions. <br />
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -162,16 +199,16 @@ const TimeLine = ({ timelineRef }) => {
                 border: "1px solid rgba(255, 255, 255, 0.18)",
                 color: "white",
               }}
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              iconStyle={{ background: "rgb(215, 50, 200)", color: "#fff" }}
               icon={<WorkIcon />}
             >
-              <h3 className="vertical-timeline-element-title">PHASE-2</h3>
-              <h4 className="vertical-timeline-element-subtitle">
+              <h3 className="vertical-timeline-element-title sub_title">PHASE-2</h3>
+              <h4 className="vertical-timeline-element-subtitle sub_title">
                 Evaluation{" "}
               </h4>
               <p>
-              Two-phase evaluation process is designed for fair and insightful assessment, 
-              focusing on assessing innovative solutions to determine their quality and potential impact.
+                Two-phase evaluation process is designed for fair and insightful assessment,
+                focusing on assessing innovative solutions to determine their quality and potential impact.
 
 
               </p>
@@ -188,15 +225,15 @@ const TimeLine = ({ timelineRef }) => {
                 border: "1px solid rgba(255, 255, 255, 0.18)",
                 color: "white",
               }}
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+              iconStyle={{ background: "rgb(215, 50, 200)", color: "#fff" }}
               icon={<SchoolIcon />}
             >
-              <h3 className="vertical-timeline-element-title">PHASE-3</h3>
-              <h4 className="vertical-timeline-element-subtitle">Mentorship</h4>
+              <h3 className="vertical-timeline-element-title sub_title">PHASE-3</h3>
+              <h4 className="vertical-timeline-element-subtitle sub_title">Mentorship</h4>
               <p>
-              Mentorship is central to Aavishkaar 2023, with the first 100 participants paired with dedicated mentors from various fields, 
-              offering weekly guidance tailored to mentors' schedules 
-              and ongoing evaluations that impact the final assessment to ensure support for innovation.
+                Mentorship is central to Aavishkaar 2024, with the first 100 participants paired with dedicated mentors from various fields,
+                offering weekly guidance tailored to mentors' schedules
+                and ongoing evaluations that impact the final assessment to ensure support for innovation.
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -211,18 +248,18 @@ const TimeLine = ({ timelineRef }) => {
                 border: "1px solid rgba(255, 255, 255, 0.18)",
                 color: "white",
               }}
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+              iconStyle={{ background: "rgb(215, 50, 200)", color: "#fff" }}
               icon={<SchoolIcon />}
             >
               <div className="grad2"></div>
-              <h3 className="vertical-timeline-element-title">PHASE-4</h3>
-              <h4 className="vertical-timeline-element-subtitle">
+              <h3 className="vertical-timeline-element-title sub_title">PHASE-4</h3>
+              <h4 className="vertical-timeline-element-subtitle sub_title">
                 Progress Review
               </h4>
               <p>
-              Teams follow a structured presentation format, showcasing prototypes and receiving clarifications during mentorship sessions, 
-              while 'build and break' exercises for in-depth project evaluation ensure progress review vital for 
-              project selection and success, with ongoing assessment and feedback on project advancements.
+                Teams follow a structured presentation format, showcasing prototypes and receiving clarifications during mentorship sessions,
+                while 'build and break' exercises for in-depth project evaluation ensure progress review vital for
+                project selection and success, with ongoing assessment and feedback on project advancements.
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -237,18 +274,18 @@ const TimeLine = ({ timelineRef }) => {
                 border: "1px solid rgba(255, 255, 255, 0.18)",
                 color: "white",
               }}
-              iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+              iconStyle={{ background: "rgb(215, 50, 200)", color: "#fff" }}
               icon={<SchoolIcon />}
             >
-              <h3 className="vertical-timeline-element-title">PHASE-5</h3>
-              <h4 className="vertical-timeline-element-subtitle">
+              <h3 className="vertical-timeline-element-title sub_title">PHASE-5</h3>
+              <h4 className="vertical-timeline-element-subtitle sub_title">
                 Grand Finale
               </h4>
               <p>
                 {" "}
-                
-                The Grand Finale marks the remarkable culmination of Aavishkaar 2023, where finalist teams showcase inventive 
-                concepts and solutions to the jury and industry professionals, and careful project assessment leads 
+
+                The Grand Finale marks the remarkable culmination of Aavishkaar 2024, where finalist teams showcase inventive
+                concepts and solutions to the jury and industry professionals, and careful project assessment leads
                 to rewarding the most exemplary teams with avant-garde ideas.
               </p>
             </VerticalTimelineElement>
@@ -264,10 +301,10 @@ const TimeLine = ({ timelineRef }) => {
                 border: "1px solid rgba(255, 255, 255, 0.18)",
                 color: "white",
               }}
-              iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+              iconStyle={{ background: "rgb(215, 50, 200)", color: "#fff" }}
               icon={<StarIcon />}
             >
-              <h3 className="vertical-timeline-element-title">Declarations of Results</h3>
+              <h3 className="vertical-timeline-element-title sub_title">Declarations of Results</h3>
 
 
             </VerticalTimelineElement>

@@ -26,6 +26,7 @@ import HighlightText from "../Utility/HighlightText";
 import Themes from "../Themes/Themes";
 import Aitam from '../../assets/Aitam_logo.jpeg'
 import gfg from "../../assets/gfg-new-logo.png"
+import Highlight1 from "../HighLight2/HIghlight1";
 
 const cards = [
   {
@@ -263,7 +264,7 @@ const Land = ({
       <section className="timer_sec" ref={stars.ref}>
 
         <div className="about_section custom-background">
-          <h1 ref={aboutRef}>ABOUT</h1>
+          <h1 ref={aboutRef}><span className="bout">ABOUT</span></h1>
           <p>
             Join AVISHKAAR 2024, a national-level hackathon hosted by Aditya Institute of Technology And Management, powered by GeeksforGeeks. Our mission is to address real-time challenges in India's rural and urban communities through innovation in digital empowerment, agriculture, healthcare, education, and sustainability. Let's create positive societal impact together.</p>
         </div>
